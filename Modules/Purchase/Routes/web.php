@@ -1,5 +1,9 @@
 <?php
 
+use Barryvdh\DomPDF\Facade\Pdf; // Ensure correct import
+use Illuminate\Support\Facades\Route;
+use Modules\Purchase\Entities\Purchase;
+use Modules\People\Entities\Supplier;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,15 +19,23 @@ Route::group(['middleware' => 'auth'], function () {
 
     //Generate PDF
     Route::get('/purchases/pdf/{id}', function ($id) {
-        $purchase = \Modules\Purchase\Entities\Purchase::findOrFail($id);
-        $supplier = \Modules\People\Entities\Supplier::findOrFail($purchase->supplier_id);
+        try {
+            // Retrieve the purchase and supplier using their IDs
+            $purchase = Purchase::findOrFail($id);
+            $supplier = Supplier::findOrFail($purchase->supplier_id);
 
-        $pdf = \PDF::loadView('purchase::print', [
-            'purchase' => $purchase,
-            'supplier' => $supplier,
-        ])->setPaper('a4');
+            // Load the PDF view and set paper size
+            $pdf = Pdf::loadView('purchase::print', [
+                'purchase' => $purchase,
+                'supplier' => $supplier,
+            ])->setPaper('a4');
 
-        return $pdf->stream('purchase-'. $purchase->reference .'.pdf');
+            // Return the generated PDF as a stream
+            return $pdf->stream('purchase-' . $purchase->reference . '.pdf');
+        } catch (\Exception $e) {
+            // Handle exceptions and return a JSON error response
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     })->name('purchases.pdf');
 
     //Sales
@@ -36,5 +48,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/purchase-payments/{purchase_id}/edit/{purchasePayment}', 'PurchasePaymentsController@edit')->name('purchase-payments.edit');
     Route::patch('/purchase-payments/update/{purchasePayment}', 'PurchasePaymentsController@update')->name('purchase-payments.update');
     Route::delete('/purchase-payments/destroy/{purchasePayment}', 'PurchasePaymentsController@destroy')->name('purchase-payments.destroy');
-
 });

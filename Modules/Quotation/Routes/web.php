@@ -1,5 +1,8 @@
 <?php
-
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Route;
+use Modules\Quotation\Entities\Quotation;
+use Modules\People\Entities\Customer;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,15 +17,20 @@
 Route::group(['middleware' => 'auth'], function () {
     //Generate PDF
     Route::get('/quotations/pdf/{id}', function ($id) {
-        $quotation = \Modules\Quotation\Entities\Quotation::findOrFail($id);
-        $customer = \Modules\People\Entities\Customer::findOrFail($quotation->customer_id);
+        try {
 
-        $pdf = \PDF::loadView('quotation::print', [
-            'quotation' => $quotation,
-            'customer' => $customer,
-        ])->setPaper('a4');
+            $quotation = Quotation::findOrFail($id);
+            $customer = Customer::findOrFail($quotation->customer_id);
 
-        return $pdf->stream('quotation-'. $quotation->reference .'.pdf');
+            $pdf = Pdf::loadView('quotation::print', [
+                'quotation' => $quotation,
+                'customer' => $customer,
+            ])->setPaper('a4');
+
+            return $pdf->stream('quotation-' . $quotation->reference . '.pdf');
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     })->name('quotations.pdf');
 
     //Send Quotation Mail

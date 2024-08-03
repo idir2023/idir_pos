@@ -1,5 +1,10 @@
 <?php
 
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Route;
+use Modules\Sale\Entities\Sale;
+use Modules\People\Entities\Customer;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,30 +23,64 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/app/pos', 'PosController@store')->name('app.pos.store');
 
     //Generate PDF
+    // Route::get('/sales/pdf/{id}', function ($id) {
+    //     $sale = \Modules\Sale\Entities\Sale::findOrFail($id);
+    //     $customer = \Modules\People\Entities\Customer::findOrFail($sale->customer_id);
+
+    //     $pdf = Pdf::loadView('sale::print', [
+    //         'sale' => $sale,
+    //         'customer' => $customer,
+    //     ])->setPaper('a4');
+
+    //     return $pdf->stream('sale-'. $sale->reference .'.pdf');
+    // })->name('sales.pdf');
+
+    // Route::get('/sales/pos/pdf/{id}', function ($id) {
+    //     $sale = \Modules\Sale\Entities\Sale::findOrFail($id);
+
+    //     $pdf = Pdf::loadView('sale::print-pos', [
+    //         'sale' => $sale,
+    //     ])->setPaper('a7')
+    //         ->setOption('margin-top', 8)
+    //         ->setOption('margin-bottom', 8)
+    //         ->setOption('margin-left', 5)
+    //         ->setOption('margin-right', 5);
+
+    //     return $pdf->stream('sale-'. $sale->reference .'.pdf');
+    // })->name('sales.pos.pdf');
+
     Route::get('/sales/pdf/{id}', function ($id) {
-        $sale = \Modules\Sale\Entities\Sale::findOrFail($id);
-        $customer = \Modules\People\Entities\Customer::findOrFail($sale->customer_id);
+        try {
+            $sale = Sale::findOrFail($id);
+            $customer = Customer::findOrFail($sale->customer_id);
 
-        $pdf = \PDF::loadView('sale::print', [
-            'sale' => $sale,
-            'customer' => $customer,
-        ])->setPaper('a4');
+            $pdf = Pdf::loadView('sale::print', [
+                'sale' => $sale,
+                'customer' => $customer,
+            ])->setPaper('a4');
 
-        return $pdf->stream('sale-'. $sale->reference .'.pdf');
+            return $pdf->stream('sale-' . $sale->reference . '.pdf');
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     })->name('sales.pdf');
 
     Route::get('/sales/pos/pdf/{id}', function ($id) {
-        $sale = \Modules\Sale\Entities\Sale::findOrFail($id);
+        try {
+            $sale = Sale::findOrFail($id);
 
-        $pdf = \PDF::loadView('sale::print-pos', [
-            'sale' => $sale,
-        ])->setPaper('a7')
-            ->setOption('margin-top', 8)
-            ->setOption('margin-bottom', 8)
-            ->setOption('margin-left', 5)
-            ->setOption('margin-right', 5);
+            $pdf = Pdf::loadView('sale::print-pos', [
+                'sale' => $sale,
+            ])->setPaper('a6')
+                ->setOption('margin-top', 8)
+                ->setOption('margin-bottom', 8)
+                ->setOption('margin-left', 5)
+                ->setOption('margin-right', 5);
 
-        return $pdf->stream('sale-'. $sale->reference .'.pdf');
+            return $pdf->stream('sale-' . $sale->reference . '.pdf');
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     })->name('sales.pos.pdf');
 
     //Sales
