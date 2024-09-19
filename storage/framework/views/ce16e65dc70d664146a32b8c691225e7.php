@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Login | {{ config('app.name') }}</title>
+    <title>Login | <?php echo e(config('app.name')); ?></title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('images/favicon.png') }}">
+    <link rel="icon" href="<?php echo e(asset('images/favicon.png')); ?>">
     <!-- CoreUI CSS -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo e(mix('css/app.css')); ?>" crossorigin="anonymous">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
@@ -19,20 +19,21 @@
 <div class="container">
     <div class="row mb-3">
         <div class="col-12 d-flex justify-content-center">
-            <img width="200" src="{{ asset('images/logo-dark.png') }}" alt="Logo">
+            <img width="200" src="<?php echo e(asset('images/logo-dark.png')); ?>" alt="Logo">
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-md-5">
-            @if(Session::has('account_deactivated'))
+            <?php if(Session::has('account_deactivated')): ?>
                 <div class="alert alert-danger" role="alert">
-                    {{ Session::get('account_deactivated') }}
+                    <?php echo e(Session::get('account_deactivated')); ?>
+
                 </div>
-            @endif
+            <?php endif; ?>
             <div class="card p-4 border-0 shadow-sm">
                 <div class="card-body">
-                    <form id="login" method="post" action="{{ url('/login') }}">
-                        @csrf
+                    <form id="login" method="post" action="<?php echo e(url('/login')); ?>">
+                        <?php echo csrf_field(); ?>
                         <h1>Login</h1>
                         <p class="text-muted">Sign In to your account</p>
                         <div class="input-group mb-3">
@@ -41,12 +42,26 @@
                                       <i class="bi bi-person"></i>
                                     </span>
                             </div>
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                   name="email" value="{{ old('email') }}"
+                            <input id="email" type="email" class="form-control <?php $__errorArgs = ['email'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>"
+                                   name="email" value="<?php echo e(old('email')); ?>"
                                    placeholder="Email">
-                            @error('email')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                            <?php $__errorArgs = ['email'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                            <div class="invalid-feedback"><?php echo e($message); ?></div>
+                            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
                         </div>
                         <div class="input-group mb-4">
                             <div class="input-group-prepend">
@@ -55,11 +70,25 @@
                                     </span>
                             </div>
                             <input id="password" type="password"
-                                   class="form-control @error('password') is-invalid @enderror"
+                                   class="form-control <?php $__errorArgs = ['password'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>"
                                    placeholder="Password" name="password">
-                            @error('password')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                            <?php $__errorArgs = ['password'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                            <div class="invalid-feedback"><?php echo e($message); ?></div>
+                            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
                         </div>
                         <div class="row">
                             <div class="col-4">
@@ -73,7 +102,7 @@
                                 </button>
                             </div>
                             <div class="col-8 text-right">
-                                <a class="btn btn-link px-0" href="{{ route('password.request') }}">
+                                <a class="btn btn-link px-0" href="<?php echo e(route('password.request')); ?>">
                                     Forgot password?
                                 </a>
                             </div>
@@ -91,7 +120,7 @@
 </div>
 
 <!-- CoreUI -->
-<script src="{{ mix('js/app.js') }}" defer></script>
+<script src="<?php echo e(mix('js/app.js')); ?>" defer></script>
 <script>
     let login = document.getElementById('login');
     let submit = document.getElementById('submit');
@@ -120,3 +149,4 @@
 
 </body>
 </html>
+<?php /**PATH C:\xampp\htdocs\idir_pos\resources\views/auth/login.blade.php ENDPATH**/ ?>

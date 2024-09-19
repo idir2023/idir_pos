@@ -1542,3 +1542,248 @@
 #53 C:\\Users\\lenovo\\Desktop\\important files\\triangle-pos\\server.php(21): require_once('C:\\\\Users\\\\lenovo...')
 #54 {main}
 "} 
+[2024-09-19 21:11:05] local.ERROR: File `C:\Users\lenovo\Desktop\important files\idir_pos\storage\app\public/temp/66ec3efd40246-1726758653/1726758653.jpg` does not exist {"userId":1,"exception":"[object] (Spatie\\MediaLibrary\\MediaCollections\\Exceptions\\FileDoesNotExist(code: 0): File `C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\storage\\app\\public/temp/66ec3efd40246-1726758653/1726758653.jpg` does not exist at C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\spatie\\laravel-medialibrary\\src\\MediaCollections\\Exceptions\\FileDoesNotExist.php:9)
+[stacktrace]
+#0 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\spatie\\laravel-medialibrary\\src\\MediaCollections\\FileAdder.php(301): Spatie\\MediaLibrary\\MediaCollections\\Exceptions\\FileDoesNotExist::create('C:\\\\Users\\\\lenovo...')
+#1 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\Modules\\User\\Http\\Controllers\\UsersController.php(53): Spatie\\MediaLibrary\\MediaCollections\\FileAdder->toMediaCollection('avatars')
+#2 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Modules\\User\\Http\\Controllers\\UsersController->store(Object(Illuminate\\Http\\Request))
+#3 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('store', Array)
+#4 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Modules\\User\\Http\\Controllers\\UsersController), 'store')
+#5 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#6 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#7 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#12 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#18 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#25 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#27 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#50 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#51 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#52 C:\\Users\\lenovo\\Desktop\\important files\\idir_pos\\server.php(21): require_once('C:\\\\Users\\\\lenovo...')
+#53 {main}
+"} 
+[2024-09-19 21:26:00] local.ERROR: The exit status code '1' says something went wrong:
+stderr: "Le chemin d'accŠs sp‚cifi‚ est introuvable.
+"
+stdout: ""
+command: C:\wkhtmltopdf\bin\wkhtmltopdf.exe --lowquality --enable-local-file-access --print-media-type "C:\Users\lenovo\AppData\Local\Temp\knp_snappy66ec4287c1c1e4.70296577.html" "C:\Users\lenovo\AppData\Local\Temp\knp_snappy66ec4287c1d5c1.73358877.pdf". {"userId":1,"exception":"[object] (RuntimeException(code: 1): The exit status code '1' says something went wrong:
+stderr: \"Le chemin d'accï¿½s spï¿½cifiï¿½ est introuvable.
+
+\"
+stdout: \"\"
+command: C:\\wkhtmltopdf\\bin\\wkhtmltopdf.exe --lowquality --enable-local-file-access --print-media-type \"C:\\Users\\lenovo\\AppData\\Local\\Temp\\knp_snappy66ec4287c1c1e4.70296577.html\" \"C:\\Users\\lenovo\\AppData\\Local\\Temp\\knp_snappy66ec4287c1d5c1.73358877.pdf\". at C:\\xampp\\htdocs\\idir_pos\\vendor\\knplabs\\knp-snappy\\src\\Knp\\Snappy\\AbstractGenerator.php:473)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\idir_pos\\vendor\\knplabs\\knp-snappy\\src\\Knp\\Snappy\\AbstractGenerator.php(198): Knp\\Snappy\\AbstractGenerator->checkProcessStatus(1, '', 'Le chemin d'acc...', 'C:\\\\wkhtmltopdf\\\\...')
+#1 C:\\xampp\\htdocs\\idir_pos\\vendor\\knplabs\\knp-snappy\\src\\Knp\\Snappy\\Pdf.php(36): Knp\\Snappy\\AbstractGenerator->generate(Array, 'C:\\\\Users\\\\lenovo...', Array, false)
+#2 C:\\xampp\\htdocs\\idir_pos\\vendor\\knplabs\\knp-snappy\\src\\Knp\\Snappy\\AbstractGenerator.php(246): Knp\\Snappy\\Pdf->generate(Array, 'C:\\\\Users\\\\lenovo...', Array)
+#3 C:\\xampp\\htdocs\\idir_pos\\vendor\\knplabs\\knp-snappy\\src\\Knp\\Snappy\\AbstractGenerator.php(265): Knp\\Snappy\\AbstractGenerator->getOutput(Array, Array)
+#4 C:\\xampp\\htdocs\\idir_pos\\vendor\\barryvdh\\laravel-snappy\\src\\PdfWrapper.php(185): Knp\\Snappy\\AbstractGenerator->getOutputFromHtml('<!doctype html>...', Array)
+#5 C:\\xampp\\htdocs\\idir_pos\\vendor\\barryvdh\\laravel-snappy\\src\\PdfWrapper.php(255): Barryvdh\\Snappy\\PdfWrapper->output()
+#6 C:\\xampp\\htdocs\\idir_pos\\vendor\\symfony\\http-foundation\\StreamedResponse.php(106): Barryvdh\\Snappy\\PdfWrapper->Barryvdh\\Snappy\\{closure}()
+#7 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Features\\SupportFileDownloads\\SupportFileDownloads.php(28): Symfony\\Component\\HttpFoundation\\StreamedResponse->sendContent()
+#8 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Features\\SupportFileDownloads\\SupportFileDownloads.php(58): Livewire\\Features\\SupportFileDownloads\\SupportFileDownloads->Livewire\\Features\\SupportFileDownloads\\{closure}()
+#9 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Features\\SupportFileDownloads\\SupportFileDownloads.php(27): Livewire\\Features\\SupportFileDownloads\\SupportFileDownloads->captureOutput(Object(Closure))
+#10 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\ComponentHook.php(45): Livewire\\Features\\SupportFileDownloads\\SupportFileDownloads->Livewire\\Features\\SupportFileDownloads\\{closure}(Object(Symfony\\Component\\HttpFoundation\\StreamedResponse))
+#11 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\ComponentHookRegistry.php(115): Livewire\\ComponentHook->Livewire\\{closure}(Object(Symfony\\Component\\HttpFoundation\\StreamedResponse))
+#12 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\EventBus.php(73): Livewire\\ComponentHookRegistry::Livewire\\{closure}(Object(Symfony\\Component\\HttpFoundation\\StreamedResponse))
+#13 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(477): Livewire\\EventBus->Livewire\\{closure}(Object(Symfony\\Component\\HttpFoundation\\StreamedResponse))
+#14 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(101): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->callMethods(Object(App\\Livewire\\Barcode\\ProductTable), Array, Object(Livewire\\Mechanisms\\HandleComponents\\ComponentContext))
+#15 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\LivewireManager.php(97): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->update(Array, Array, Array)
+#16 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleRequests\\HandleRequests.php(94): Livewire\\LivewireManager->update(Array, Array, Array)
+#17 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): Livewire\\Mechanisms\\HandleRequests\\HandleRequests->handleUpdate()
+#18 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Livewire\\Mechanisms\\HandleRequests\\HandleRequests), 'handleUpdate')
+#19 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#20 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#21 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#30 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#38 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#39 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#40 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#41 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\xampp\\htdocs\\idir_pos\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#60 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#61 C:\\xampp\\htdocs\\idir_pos\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#62 C:\\xampp\\htdocs\\idir_pos\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
+#63 {main}
+"} 
+[2024-09-19 21:27:11] local.ERROR: The exit status code '1' says something went wrong:
+stderr: "Le chemin d'accŠs sp‚cifi‚ est introuvable.
+"
+stdout: ""
+command: C:\wkhtmltopdf\bin\wkhtmltopdf.exe --lowquality --enable-local-file-access --print-media-type "C:\Users\lenovo\AppData\Local\Temp\knp_snappy66ec42cf0b7095.48971559.html" "C:\Users\lenovo\AppData\Local\Temp\knp_snappy66ec42cf0b8600.77420746.pdf". {"userId":1,"exception":"[object] (RuntimeException(code: 1): The exit status code '1' says something went wrong:
+stderr: \"Le chemin d'accï¿½s spï¿½cifiï¿½ est introuvable.
+
+\"
+stdout: \"\"
+command: C:\\wkhtmltopdf\\bin\\wkhtmltopdf.exe --lowquality --enable-local-file-access --print-media-type \"C:\\Users\\lenovo\\AppData\\Local\\Temp\\knp_snappy66ec42cf0b7095.48971559.html\" \"C:\\Users\\lenovo\\AppData\\Local\\Temp\\knp_snappy66ec42cf0b8600.77420746.pdf\". at C:\\xampp\\htdocs\\idir_pos\\vendor\\knplabs\\knp-snappy\\src\\Knp\\Snappy\\AbstractGenerator.php:473)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\idir_pos\\vendor\\knplabs\\knp-snappy\\src\\Knp\\Snappy\\AbstractGenerator.php(198): Knp\\Snappy\\AbstractGenerator->checkProcessStatus(1, '', 'Le chemin d'acc...', 'C:\\\\wkhtmltopdf\\\\...')
+#1 C:\\xampp\\htdocs\\idir_pos\\vendor\\knplabs\\knp-snappy\\src\\Knp\\Snappy\\Pdf.php(36): Knp\\Snappy\\AbstractGenerator->generate(Array, 'C:\\\\Users\\\\lenovo...', Array, false)
+#2 C:\\xampp\\htdocs\\idir_pos\\vendor\\knplabs\\knp-snappy\\src\\Knp\\Snappy\\AbstractGenerator.php(246): Knp\\Snappy\\Pdf->generate(Array, 'C:\\\\Users\\\\lenovo...', Array)
+#3 C:\\xampp\\htdocs\\idir_pos\\vendor\\knplabs\\knp-snappy\\src\\Knp\\Snappy\\AbstractGenerator.php(265): Knp\\Snappy\\AbstractGenerator->getOutput(Array, Array)
+#4 C:\\xampp\\htdocs\\idir_pos\\vendor\\barryvdh\\laravel-snappy\\src\\PdfWrapper.php(185): Knp\\Snappy\\AbstractGenerator->getOutputFromHtml('<!doctype html>...', Array)
+#5 C:\\xampp\\htdocs\\idir_pos\\vendor\\barryvdh\\laravel-snappy\\src\\PdfWrapper.php(255): Barryvdh\\Snappy\\PdfWrapper->output()
+#6 C:\\xampp\\htdocs\\idir_pos\\vendor\\symfony\\http-foundation\\StreamedResponse.php(106): Barryvdh\\Snappy\\PdfWrapper->Barryvdh\\Snappy\\{closure}()
+#7 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Features\\SupportFileDownloads\\SupportFileDownloads.php(28): Symfony\\Component\\HttpFoundation\\StreamedResponse->sendContent()
+#8 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Features\\SupportFileDownloads\\SupportFileDownloads.php(58): Livewire\\Features\\SupportFileDownloads\\SupportFileDownloads->Livewire\\Features\\SupportFileDownloads\\{closure}()
+#9 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Features\\SupportFileDownloads\\SupportFileDownloads.php(27): Livewire\\Features\\SupportFileDownloads\\SupportFileDownloads->captureOutput(Object(Closure))
+#10 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\ComponentHook.php(45): Livewire\\Features\\SupportFileDownloads\\SupportFileDownloads->Livewire\\Features\\SupportFileDownloads\\{closure}(Object(Symfony\\Component\\HttpFoundation\\StreamedResponse))
+#11 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\ComponentHookRegistry.php(115): Livewire\\ComponentHook->Livewire\\{closure}(Object(Symfony\\Component\\HttpFoundation\\StreamedResponse))
+#12 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\EventBus.php(73): Livewire\\ComponentHookRegistry::Livewire\\{closure}(Object(Symfony\\Component\\HttpFoundation\\StreamedResponse))
+#13 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(477): Livewire\\EventBus->Livewire\\{closure}(Object(Symfony\\Component\\HttpFoundation\\StreamedResponse))
+#14 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleComponents\\HandleComponents.php(101): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->callMethods(Object(App\\Livewire\\Barcode\\ProductTable), Array, Object(Livewire\\Mechanisms\\HandleComponents\\ComponentContext))
+#15 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\LivewireManager.php(97): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->update(Array, Array, Array)
+#16 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Mechanisms\\HandleRequests\\HandleRequests.php(94): Livewire\\LivewireManager->update(Array, Array, Array)
+#17 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(46): Livewire\\Mechanisms\\HandleRequests\\HandleRequests->handleUpdate()
+#18 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Livewire\\Mechanisms\\HandleRequests\\HandleRequests), 'handleUpdate')
+#19 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#20 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#21 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#30 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#38 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#39 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#40 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#41 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\xampp\\htdocs\\idir_pos\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\xampp\\htdocs\\idir_pos\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#60 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#61 C:\\xampp\\htdocs\\idir_pos\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#62 C:\\xampp\\htdocs\\idir_pos\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
+#63 {main}
+"} 
+[2024-09-19 21:27:43] local.ERROR: Command "cache:" is ambiguous.
+Did you mean one of these?
+    cache:clear            Flush the application cache
+    cache:forget           Remove an item from the cache
+    cache:prune-stale-tags Prune stale cache tags from the cache (Redis only)
+    cache:table            Create a migration for the cache database table. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"cache:\" is ambiguous.
+Did you mean one of these?
+    cache:clear            Flush the application cache
+    cache:forget           Remove an item from the cache
+    cache:prune-stale-tags Prune stale cache tags from the cache (Redis only)
+    cache:table            Create a migration for the cache database table. at C:\\xampp\\htdocs\\idir_pos\\vendor\\symfony\\console\\Application.php:778)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\idir_pos\\vendor\\symfony\\console\\Application.php(266): Symfony\\Component\\Console\\Application->find('cache:')
+#1 C:\\xampp\\htdocs\\idir_pos\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\idir_pos\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 
+[2024-09-19 21:28:05] local.ERROR: Command "config:clair" is not defined.
+
+Did you mean one of these?
+    config:cache
+    config:clear
+    config:show {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"config:clair\" is not defined.
+
+Did you mean one of these?
+    config:cache
+    config:clear
+    config:show at C:\\xampp\\htdocs\\idir_pos\\vendor\\symfony\\console\\Application.php:737)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\idir_pos\\vendor\\symfony\\console\\Application.php(266): Symfony\\Component\\Console\\Application->find('config:clair')
+#1 C:\\xampp\\htdocs\\idir_pos\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\idir_pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\idir_pos\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 

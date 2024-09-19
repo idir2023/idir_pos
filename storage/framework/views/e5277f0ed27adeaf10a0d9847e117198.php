@@ -16,4 +16,4 @@
     </ul>
     <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
 </div>
-<?php /**PATH C:\Users\lenovo\Desktop\important files\idir_pos\resources\views/layouts/sidebar.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\xampp\htdocs\idir_pos\resources\views/layouts/sidebar.blade.php ENDPATH**/ ?>
