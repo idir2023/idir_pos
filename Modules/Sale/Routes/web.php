@@ -24,62 +24,51 @@ Route::group(['middleware' => 'auth'], function () {
 
     //Generate PDF
     // Route::get('/sales/pdf/{id}', function ($id) {
-    //     $sale = \Modules\Sale\Entities\Sale::findOrFail($id);
-    //     $customer = \Modules\People\Entities\Customer::findOrFail($sale->customer_id);
+    //     try {
+    //         $sale = Sale::findOrFail($id);
+    //         $customer = Customer::findOrFail($sale->customer_id);
 
-    //     $pdf = Pdf::loadView('sale::print', [
-    //         'sale' => $sale,
-    //         'customer' => $customer,
-    //     ])->setPaper('a4');
+    //         $pdf = Pdf::loadView('sale::print', [
+    //             'sale' => $sale,
+    //             'customer' => $customer,
+    //         ])->setPaper('a4');
 
-    //     return $pdf->stream('sale-'. $sale->reference .'.pdf');
+    //         return $pdf->stream('sale-' . $sale->reference . '.pdf');
+    //     } catch (\Exception $e) {
+    //         return response()->json(['error' => $e->getMessage()], 500);
+    //     }
     // })->name('sales.pdf');
-
-    // Route::get('/sales/pos/pdf/{id}', function ($id) {
-    //     $sale = \Modules\Sale\Entities\Sale::findOrFail($id);
-
-    //     $pdf = Pdf::loadView('sale::print-pos', [
-    //         'sale' => $sale,
-    //     ])->setPaper('a7')
-    //         ->setOption('margin-top', 8)
-    //         ->setOption('margin-bottom', 8)
-    //         ->setOption('margin-left', 5)
-    //         ->setOption('margin-right', 5);
-
-    //     return $pdf->stream('sale-'. $sale->reference .'.pdf');
-    // })->name('sales.pos.pdf');
 
     Route::get('/sales/pdf/{id}', function ($id) {
         try {
             $sale = Sale::findOrFail($id);
             $customer = Customer::findOrFail($sale->customer_id);
-
+    
             $pdf = Pdf::loadView('sale::print', [
                 'sale' => $sale,
                 'customer' => $customer,
             ])->setPaper('a4');
-
+    
             return $pdf->stream('sale-' . $sale->reference . '.pdf');
         } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
+            Log::error('Error generating PDF for sale ID ' . $id . ': ' . $e->getMessage());
+            return response()->json(['error' => 'Could not generate PDF.'], 500);
         }
     })->name('sales.pdf');
-
+    
+    // Similarly for the POS route
     Route::get('/sales/pos/pdf/{id}', function ($id) {
         try {
             $sale = Sale::findOrFail($id);
-
+    
             $pdf = Pdf::loadView('sale::print-pos', [
                 'sale' => $sale,
-            ])->setPaper('a6')
-                ->setOption('margin-top', 8)
-                ->setOption('margin-bottom', 8)
-                ->setOption('margin-left', 5)
-                ->setOption('margin-right', 5);
-
+            ])->setPaper('a4');
+    
             return $pdf->stream('sale-' . $sale->reference . '.pdf');
         } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
+            Log::error('Error generating POS PDF for sale ID ' . $id . ': ' . $e->getMessage());
+            return response()->json(['error' => 'Could not generate PDF.'], 500);
         }
     })->name('sales.pos.pdf');
 

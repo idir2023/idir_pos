@@ -99,6 +99,7 @@
                         </tbody>
                     </table>
                 </div>
+                
                 <div class="row">
                     <div class="col-xs-4 col-xs-offset-8">
                         <table class="table">
@@ -125,6 +126,7 @@
                         </table>
                     </div>
                 </div>
+
                 <div class="row" style="margin-top: 25px;">
                     <div class="col-xs-12">
                         <p style="font-style: italic;text-align: center">{{ settings()->company_name }} &copy; {{

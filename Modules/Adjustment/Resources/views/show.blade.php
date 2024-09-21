@@ -23,20 +23,12 @@
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <tr>
-                                    <th colspan="2">
-                                        Date
-                                    </th>
-                                    <th colspan="2">
-                                        Reference
-                                    </th>
+                                    <th colspan="2">Date</th>
+                                    <th colspan="2">Reference</th>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        {{ $adjustment->date }}
-                                    </td>
-                                    <td colspan="2">
-                                        {{ $adjustment->reference }}
-                                    </td>
+                                    <td colspan="2">{{ $adjustment->date }}</td>
+                                    <td colspan="2">{{ $adjustment->reference }}</td>
                                 </tr>
 
                                 <tr>
@@ -48,8 +40,12 @@
 
                                 @foreach($adjustment->adjustedProducts as $adjustedProduct)
                                     <tr>
-                                        <td>{{ $adjustedProduct->product->product_name }}</td>
-                                        <td>{{ $adjustedProduct->product->product_code }}</td>
+                                        <td>
+                                            {{ $adjustedProduct->product ? $adjustedProduct->product->product_name : 'N/A' }}
+                                        </td>
+                                        <td>
+                                            {{ $adjustedProduct->product ? $adjustedProduct->product->product_code : 'N/A' }}
+                                        </td>
                                         <td>{{ $adjustedProduct->quantity }}</td>
                                         <td>
                                             @if($adjustedProduct->type == 'add')
